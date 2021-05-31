@@ -5,7 +5,55 @@
   --header-width: 600px;
 }
 
-@media (max-width: 600px), (max-height: 650px) {
+@media (min-width: 1000px) and (min-height: 1100px) {
+  :root {
+    --grid-size: 800px;
+    --button-size: 150px;
+    --header-width: 950px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  button {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 900px) and (min-height: 990px) {
+  :root {
+    --grid-size: 700px;
+    --button-size: 130px;
+    --header-width: 850px;
+  }
+
+  h1 {
+    font-size: 1.9em;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 800px) and (min-height: 880px) {
+  :root {
+    --grid-size: 550px;
+    --button-size: 115px;
+    --header-width: 680px;
+  }
+
+  h1 {
+    font-size: 1.7em;
+  }
+
+  button {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) and (max-height: 650px) {
   :root {
     --grid-size: 400px;
     --button-size: 85px;
@@ -127,6 +175,6 @@ button:active {
   display: grid;
   width: var(--grid-size);
   height: var(--grid-size);
-  background: gold;
+  background: black;
   box-shadow: 0 0 5px 0.5px gold;
 }
