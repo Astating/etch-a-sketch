@@ -1,6 +1,132 @@
+/*VARIABLES & MEDIA QUERIES*/
+:root {
+  --grid-size: 500px;
+  --button-size: 100px;
+  --header-width: 600px;
+}
+
+@media (max-width: 600px), (max-height: 650px) {
+  :root {
+    --grid-size: 400px;
+    --button-size: 85px;
+    --header-width: 500px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  button {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 500px), (max-height: 550px) {
+  :root {
+    --grid-size: 300px;
+    --button-size: 70px;
+    --header-width: 400px;
+  }
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  button {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 400px), (max-height: 450px) {
+  :root {
+    --grid-size: 200px;
+    --button-size: 55px;
+    --header-width: 300px;
+  }
+
+  h1 {
+    font-size: 1.1em;
+  }
+
+  button {
+    font-size: 7px;
+  }
+}
+
+body {
+  background: radial-gradient(pink, pink, palevioletred, blue, cyan, blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2em;
+  font-style: italic;
+  background: black;
+  border-radius: 50%;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  width: 500px;
+  max-width: 100%;
+  padding: 10px 3px;
+  margin-bottom: 20px;
+  box-shadow: 1px 2px 3px 2px pink;
+  z-index: 2;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: var(--header-width);
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  color: gold;
+  background: purple;
+  width: var(--button-size);
+  border-color: pink;
+  font-weight: bold;
+  padding: 5px 1px;
+
+}
+
+button:hover {
+    animation: animation 0.2s ease;
+}
+
+button:active {
+    transform: translate(-1px, -1px);
+}
+
+@keyframes animation {
+    0% {
+      transform: rotate(0);
+    }
+    30% {
+      transform: rotate(0.03turn);
+    }
+    60% {
+      transform: rotate(-0.03turn);
+    }
+    90% {
+      transform: rotate(0);
+    }
+  }
+
 .container-grid {
-    display: grid;
-    gap: 1px;
-    width:500px;
-    height:500px;
+  transform: rotateZ(45deg);
+  margin: 30px auto;
+  display: grid;
+  width: var(--grid-size);
+  height: var(--grid-size);
+  background: gold;
+  box-shadow: 0 0 5px 0.5px gold;
 }
