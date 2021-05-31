@@ -9,7 +9,9 @@ eraserButton.addEventListener("click", erasing);
 const rainbowButton = document.querySelector("#rainbow");
 rainbowButton.addEventListener("click", rainbowing);
 
-function addGrid(gridNum = 16) {
+let gridSquareSize = 16;
+
+function addGrid(gridNum = gridSquareSize) {
   container.textContent = "";
   eraserON = false;
   container.style.gridTemplateColumns = `repeat(${gridNum}, 1fr)`;
@@ -49,7 +51,7 @@ function rainbowing() {
 }
 
 function clearGrid() {
-  let newSize = Number(prompt("What size should it be ? (0-100)", "16"));
+  let newSize = Number(prompt("What size should it be ? (0-100)", `${gridSquareSize}`));
   if (newSize <= 100 && newSize >= 0) {
     addGrid(newSize);
   } else {
